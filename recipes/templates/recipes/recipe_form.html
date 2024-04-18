@@ -1,0 +1,29 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+
+  <form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name:       </label>
+      {{ form.name }}
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Description:</label>
+      {{ form.description }}
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Content:    </label>
+      {{ form.content }}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <div class="border-top pt-3">
+    <a class="text-muted" href="{% url 'recipes-home' %}"
+      >Cancel</a
+    >
+  </div>
+
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<h1>Recipe # {{ recipe.id }}</h1>
+<div class="card my-4" style="width: 25rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ recipe.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ recipe.description }}</h6>
+    <p class="card-text">
+        <ul class="entry-content" style="list-style-type: circle;">
+            {% for line in recipe.content %}
+                <li>{{ line }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+  </div>
+</div>
+{% if object.author == user or user.is_staff %}
+<div class="col-4">
+    <a class="btn btn-outline-info" href="{% url 'recipes-update' recipe.pk %}">Update</a>
+    <a class="btn btn-outline-danger" href="{% url 'recipes-delete' recipe.pk %}">Delete</a>
+</div>
+{% endif %}
+
+{% endblock %}

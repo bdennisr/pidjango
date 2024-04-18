@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<h1>Recipes:</h1>
+<ul>
+{% for recipe in recipe_list %}
+    <div class="card my-4" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ recipe.name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ recipe.author }}</h6>
+            <h6 class="card-text">{{ recipe.description }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{ recipe.date}}</h6>
+            <a href="{% url 'recipe-detail' recipe.pk %}" class="card-link">View Recipe</a>
+        </div>
+    </div>
+{% endfor %}
+</ul>
+<div class="col-4">
+    <a class="btn btn-outline-info" href="{% url 'recipes-create' %}">Create</a>
+</div>
+
+{% endblock %}

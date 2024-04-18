@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<h1>Graphs</h1>
+<p>There will be graphs here eventually</p>
+
+<ul>
+    {% for graph in graph_list %}
+        <li>
+            <a href="{% url 'graph_detail' graph.pk %}">{{ graph.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
