@@ -19,3 +19,21 @@ class Graph(models.Model):
     def get_absolute_url(self):
         """Returns the url to access a particular genre instance."""
         return reverse('genre-detail', args=[str(self.id)])
+    
+    
+class spindelData(models.Model):
+    graph = models.ForeignKey(Graph, on_delete=models.CASCADE)
+    name = models.CharField(max_length=200)
+    spindle_id = models.CharField(max_length=200)
+    token = models.CharField(max_length=200)
+    gravity_unit = models.CharField(max_length=200)
+    temp_units = models.CharField(max_length=200)
+    interval = models.PositiveSmallIntegerField()
+    temperature = models.PositiveSmallIntegerField()
+    gravity = models.PositiveSmallIntegerField()
+    angle = models.IntegerField()
+    battery = models.PositiveSmallIntegerField()
+    RSSI = models.IntegerField()
+    corr_gravity = models.PositiveSmallIntegerField()
+    run_time = models.PositiveSmallIntegerField()
+    date = models.DateTimeField(("Date"), auto_now_add = True)

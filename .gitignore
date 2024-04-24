@@ -16,6 +16,9 @@ starter_files.tar.xz
 /hello/html/
 /hello_css/html/
 
+/static/
+*/migrations/
+
 # EECS 485 Project 2
 *.pem
 *.db
