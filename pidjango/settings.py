@@ -125,6 +125,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/accounts/login'
 
+
+SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 
