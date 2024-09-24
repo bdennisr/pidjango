@@ -7,7 +7,6 @@ class GraphListView(LoginRequiredMixin, generic.ListView):
     login_url = '/accounts/login/'
     model = Graph
     context_object_name = 'graph_list'   # your own name for the list as a template variable
-    #queryset = Recipe.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
     template_name = 'graphs/index.html'  # Specify your own template name/location
 
 

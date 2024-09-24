@@ -17,6 +17,9 @@ secret_key.txt
 /hello/html/
 /hello_css/html/
 
+/static/
+*/migrations/
+
 # EECS 485 Project 2
 *.pem
 *.db
