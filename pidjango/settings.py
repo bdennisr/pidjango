@@ -27,7 +27,8 @@ with open(BASE_DIR / 'secret_key.txt') as f:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['raspberrypi', '192.168.0.195', 'edisonlakebrewing.com']
+ALLOWED_HOSTS = ['raspberrypi', '192.168.0.195', 
+                 'www.edisonlakebrewing.com', 'edisonlakebrewing.com']
 
 # Application definition
 
@@ -124,7 +125,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/accounts/login'
-
 
 SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = False
