@@ -19,6 +19,8 @@ starter_files.tar.xz
 /static/
 */migrations/
 
+db.sqlite3
+db/
 # EECS 485 Project 2
 *.pem
 *.db
