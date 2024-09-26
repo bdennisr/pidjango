@@ -19,7 +19,7 @@ secret_key.txt
 
 /static/
 */migrations/
-db/
+/db/
 
 # EECS 485 Project 2
 *.pem
