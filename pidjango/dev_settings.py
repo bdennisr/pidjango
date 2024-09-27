@@ -25,7 +25,7 @@ with open(BASE_DIR / 'secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['raspberrypi', '192.168.0.195', '127.0.0.1',
                  'www.edisonlakebrewing.com', 'edisonlakebrewing.com']
